@@ -61,6 +61,12 @@ const prodList = [
     rating: "4.5",
     numberOfPeople: "317",
   },
+  {
+    id: 11,
+    src: "assets/images/Prod10.jpg",
+    rating: "4.6",
+    numberOfPeople: "215",
+  },
 ];
 
 // let price = function () {
@@ -76,15 +82,16 @@ const prodList = [
 for (let item = 0; item < prodList.length; item++) {
   const boxdiv = document.createElement("div");
   boxdiv.className = "box";
+  const { src, rating, numberOfPeople } = prodList[item];
 
   boxdiv.innerHTML = `<div class='card'>
           <div class="img-cont">
-            <img class="prod-img" src="${prodList[item].src}" >
+            <img class="prod-img" src="${src}" >
                 <div class="rate-box">
-                    <p>${prodList[item].rating}</p>
+                    <p>${rating}</p>
                     <p>⭐</p>
                      |
-                    <p>${prodList[item].numberOfPeople}</p>
+                    <p>${numberOfPeople}</p>
                 </div>
               </div>
             <p class="bold">INVICTUS</p>
